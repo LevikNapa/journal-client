@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import {fetchEntries} from './actions/fetchEntries'
 
 
-class App extends React.Component {
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/entries/1')
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // }
+class App extends Component {
+  componentDidMount() {
+     this.props.fetchEntries({type: "FETCH_ENTRIES", payload: {title: 'best ever'}})
+  }
   render() {
    return (
     <div className="App">
@@ -15,5 +15,9 @@ class App extends React.Component {
   );
  }
 }
+//
+// const mapStateToProps = (state) => {
+//
+// }
 
-export default App;
+export default connect(null, {fetchEntries})(App);
