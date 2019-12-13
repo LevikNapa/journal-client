@@ -1,5 +1,10 @@
 export default function entryReducer(state = {entries:[]}, action) {
-  // debugger
- return action.payload
+  switch (action.type) {
+    case 'FETCH_ENTRIES':
+      return {entries: action.payload}
+
+    default:
+      return state
+  }
 
 }

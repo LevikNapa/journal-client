@@ -1,6 +1,11 @@
-export function fetchEntries(action) {
-  return action 
-  // fetch('http://localhost:3000/entries/1')
-  // .then(response => response.json())
-  // .then(data => console.log(data))
+export function fetchEntries() {
+
+  return (dispatch) => {
+    fetch('http://localhost:3000/entries')
+    .then(response => response.json())
+    .then(data => dispatch({
+      type: 'FETCH_ENTRIES',
+      payload: data
+    }))
+  }
 }

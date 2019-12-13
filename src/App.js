@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {fetchEntries} from './actions/fetchEntries'
+import EntriesContainer from './containers/EntriesContainer'
 
 
 class App extends Component {
   componentDidMount() {
-     this.props.fetchEntries({type: "FETCH_ENTRIES", payload: {title: 'best ever'}})
+
   }
   render() {
    return (
     <div className="App">
-      App
+      <EntriesContainer />
     </div>
   );
  }
@@ -20,4 +20,4 @@ class App extends Component {
 //
 // }
 
-export default connect(null, {fetchEntries})(App);
+export default connect()(App);
