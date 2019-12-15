@@ -14,7 +14,7 @@ class EntriesContainer extends React.Component {
   render() {
     return (
       <div>
-          <EntryForm/>
+          <EntryForm/><br/><br/>
           <EntryList entries={this.props.entries}/>
       </div>
     )
