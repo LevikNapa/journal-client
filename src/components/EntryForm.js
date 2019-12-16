@@ -18,6 +18,10 @@ class EntryForm extends React.Component {
    handleSubmit = (event) => {
      event.preventDefault()
       this.props.addEntry(this.state)
+      this.setState({
+        title: '',
+        content: ''
+      })
    }
 
   render() {
