@@ -1,41 +1,18 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {addEntry} from '../actions/addEntry'
 
-class EntryForm extends React.Component {
+const EntryForm = (props) => {
 
-   state = {
-     title: '',
-     content: ''
-   }
-
-   handleChange = (event) => {
-     this.setState({
-       [event.target.name]: event.target.value
-     })
-   }
-
-   handleSubmit = (event) => {
-     event.preventDefault()
-      this.props.addEntry(this.state)
-      this.setState({
-        title: '',
-        content: ''
-      })
-   }
-
-  render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="form-group well">
+        <form onSubmit={props.onSubmit}>
           <label>Title: </label>
-          <input type='text' placeholder='Title' value={this.state.title} name='title' onChange={this.handleChange}/><br/>
+          <div className="field"><input type='text' placeholder='Title' value={props.title} name='title' onChange={props.onChange}/></div><br/>
           <label>Content: </label>
-          <input type='text' placeholder='Content' value={this.state.content} name='content' onChange={this.handleChange}/><br/>
-          <input type='submit'/>
+          <div><input type='text' placeholder='Content' value={props.content} name='content' onChange={props.onChange}/></div><br/>
+          <input className="btn btn-info" type='submit'/>
         </form>
       </div>
     )
-  }
 }
-export default connect(null, {addEntry})(EntryForm)
+
+export default EntryForm
