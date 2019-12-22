@@ -13,10 +13,10 @@ const EntryList = (props) => {
       <div className="well">
         <h2>Entries: </h2>
         {props.entries.map(entry =>
-          <li key={entry.id}>
-            <Link to={`/entries/${entry.id}`}><h4>{entry.title}</h4></Link>
+          <div key={entry.id}>
+            <Link to={`/entries/${entry.id}`}><h3>{entry.title}</h3></Link>
               <button onClick={() => handleDelete(entry)}>Delete</button>
-          </li>)}
+          </div>)}
       </div>
     )
 }
