@@ -26,7 +26,7 @@ class EntriesContainer extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path='/entries/new' component={NewEntryContainer}/>
           <Route path='/entries/:id' render={(routerProps) => <EntryShow {...routerProps} entries={this.props.entries}/>} />
-          <Route exact path='/entries' render={() => <EntryList entries={this.props.entries}/> }/>
+          <Route exact path='/entries' render={() => <EntryComponent entries={this.props.entries}/> }/>
         </Switch>
       </div>
     )
