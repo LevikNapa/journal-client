@@ -30,6 +30,7 @@ class EntryComponent extends React.Component {
         {this.props.entries.map(entry =>
           <div key={entry.id}>
             <Link to={`/entries/${entry.id}`}><h3>{entry.title}</h3></Link>
+            <h4>{entry.content}</h4>
             <LikesComponent />
           </div>)}
       </div>
