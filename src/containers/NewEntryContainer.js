@@ -14,12 +14,14 @@ class NewEntryContainer extends React.Component {
      this.setState({
        [event.target.name]: event.target.value
      })
-     
+
    }
 
    handleSubmit = (event) => {
      event.preventDefault()
+     console.log(1)
       this.props.addEntry(this.state)
+      console.log(2)
       this.setState({
         title: '',
         content: ''
@@ -27,6 +29,7 @@ class NewEntryContainer extends React.Component {
    }
 
   render() {
+    console.log(3)
     return (
       <div>
         <h2>New Entry</h2>

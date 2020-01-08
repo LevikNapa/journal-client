@@ -10,6 +10,7 @@ import EntryList from '../components/EntryList'
 import EntryEdit from '../components/EntryEdit'
 import NewEntryContainer from './NewEntryContainer'
 import NavBar from '../components/NavBar'
+import EntryComponent from '../components/EntryComponent'
 
 class EntriesContainer extends React.Component {
 
