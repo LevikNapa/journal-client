@@ -6,7 +6,17 @@ This is a project built with React and Redux. It allows you to create, save and 
 `Motivation`
 I love to jot down small tidbits of whats going on in my day, it helps me organize my thought and recenter myself.
 
-License
+Usage:
+
+First clone the journal-backend repo and cd to its directory and run rails s, then clone this repo and cd to this directory.
+
+Run npm install
+
+Launch:
+
+Run npm start.
+
+License:
 
 Copyright <2020>
 
