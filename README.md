@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+`Journal app`
+This is a project built with React and Redux. It allows you to create, save and edit journal entries with a simple and easy to use interface.
+
+`Motivation`
+I love to jot down small tidbits of whats going on in my day, it helps me organize my thought and recenter myself.
+
 ## Available Scripts
 
 In the project directory, you can run:
